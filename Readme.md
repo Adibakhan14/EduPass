@@ -1,15 +1,27 @@
-# 🎓 EduPass - NFT Based Education Passport
+# 🎓 EduPass – Smart Campus Access & Attendance System
 
-EduPass is a blockchain-powered digital education identity that stores verified academic records, achievements, and skills as NFTs. This ensures **tamper-proof**, **globally recognized**, and **easily shareable** credentials.
+EduPass is a web-based smart campus solution designed for secure, contactless entry and automated attendance tracking using QR codes.  
+It ensures seamless access management for students, faculty, and visitors, while maintaining accurate attendance records in real-time.
 
-## 🌟 Inspiration
-Students and professionals often struggle with **verifying and sharing educational credentials** across borders. EduPass solves this by using **NFT technology** for secure, decentralized record-keeping.
+---
 
-## 🚀 What it Does
-- Issues **NFT-based education passports** containing verified records.
-- Allows **secure verification** by employers and institutions.
-- Makes credentials **globally accessible** with **privacy controls**.
-- Supports **lifetime storage** of academic achievements.
+## 📌 Features
+- 🔐 **Secure QR Code-based Access** – Each user has a unique QR code for entry.
+- ⏱ **Automated Attendance Tracking** – Instant logging of in/out times.
+- 📊 **Real-time Attendance Dashboard** – View attendance analytics for students & faculty.
+- 📱 **Responsive UI** – Works smoothly on desktops, tablets, and mobiles.
+- 🛡 **Role-based Access Control** – Different permissions for students, faculty, and admin.
+- 🖼 **Modern Design** – Simple, clean, and intuitive interface.
+
+---
+
+## 🖼 Project Preview
+### 📢 Banner
+![Banner](https://github.com/user-attachments/assets/c34961e6-b5e6-4efc-9a9d-4892d588ce89)  
+
+### 🏠 Home Page Screenshot
+![Home Page](https://github.com/user-attachments/assets/c18cc53e-d22b-4db1-a431-3082de00f8e1)  
+
 
 ## 🛠️ How We Built It
 - **Frontend:** HTML, CSS, JavaScript (prototype)
@@ -32,8 +44,11 @@ Students and professionals often struggle with **verifying and sharing education
 - Add **IPFS for decentralized storage**.
 - Build a **mobile-friendly progressive web app**.
 
-## 📸 Demo
-![EduPass Demo](images/logo.png)
-
 ---
-💡 *Built for [Hackathon Name]* by **Adiba Khan** and team.
+
+## 🤝 Contributors
+- 👩‍💻 Adiba Khan
+- 👩‍💻 Khushi Chadokar
+- 👩‍💻 Deeksha Mishra
+  
+💡 *Built for [The Gated NFTs University Regional Hackathon]* .
