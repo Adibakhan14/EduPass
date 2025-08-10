@@ -1,0 +1,488 @@
+:root {
+      --bg: #181f2a;
+      --card: #232c3b;
+      --accent: #1de9b6;
+      --accent2: #2979ff;
+      --text: #f5f7fa;
+      --text-muted: #b0b8c1;
+      --border: #263043;
+      --shadow: 0 6px 32px rgba(30, 41, 59, 0.18);
+    }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      background: var(--card);
+      color: var(--text);
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 600;
+      font-size: 1.08rem;
+      transition: color 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+    nav a.active, nav a:hover {
+      color: var(--accent2);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2.5rem auto;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 2.5rem 2.5rem 2rem 2.5rem;
+      display: none;
+      animation: fadein 0.5s;
+    }
+    .container.active {
+      display: block;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .hero h2 {
+      font-size: 2.3rem;
+      color: var(--accent2);
+      margin-bottom: 0.7rem;
+      font-weight: 700;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+    .btn {
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+      color: #fff;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 10px;
+      font-size: 1.13rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 12px rgba(41,121,255,0.08);
+      transition: background 0.2s, transform 0.1s;
+      outline: none;
+    }
+    .btn:active {
+      transform: scale(0.97);
+    }
+    .btn.secondary {
+      background: var(--card);
+      color: var(--accent2);
+      border: 2px solid var(--accent2);
+      margin-top: 1rem;
+    }
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin: 2.5rem 0 1.5rem 0;
+      gap: 2rem;
+    }
+    .feature-card {
+      flex: 1;
+      background: #1a2332;
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(41,121,255,0.05);
+      border: 1.5px solid var(--border);
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      border: 1.5px solid var(--accent2);
+      box-shadow: 0 4px 24px rgba(41,121,255,0.10);
+    }
+    .feature-card span {
+      font-size: 2.3rem;
+      display: block;
+      margin-bottom: 0.7rem;
+    }
+    .feature-card strong {
+      color: var(--accent);
+      font-size: 1.13rem;
+      font-weight: 700;
+    }
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+    /* Student Reviews */
+    .reviews-section {
+      margin: 2.5rem 0 1.5rem 0;
+      text-align: center;
+    }
+    .reviews-title {
+      color: var(--accent2);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .reviews-list {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .review-card {
+      background: #1a2332;
+      border-radius: 14px;
+      padding: 1.3rem 1.1rem 1.1rem 1.1rem;
+      box-shadow: 0 2px 12px rgba(41,121,255,0.05);
+      border: 1.5px solid var(--border);
+      width: 250px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    .review-card:hover {
+      border: 1.5px solid var(--accent);
+      box-shadow: 0 4px 24px rgba(29,233,182,0.10);
+    }
+    .review-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2.5px solid var(--accent2);
+      box-shadow: 0 2px 8px rgba(41,121,255,0.10);
+    }
+    .review-name {
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+      font-size: 1.08rem;
+    }
+    .review-message {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      text-align: center;
+    }
+    /* Contact Us */
+    .contact-section {
+      margin: 3rem 0 0 0;
+      padding-top: 2rem;
+      border-top: 1.5px solid var(--border);
+      text-align: center;
+    }
+    .contact-title {
+      color: var(--accent2);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+    }
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      align-items: stretch;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      background: #181f2a;
+      color: var(--text);
+      font-size: 1.05rem;
+      outline: none;
+      transition: border 0.2s;
+      resize: none;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border: 1.5px solid var(--accent2);
+    }
+    .contact-form button {
+      margin-top: 0.5rem;
+    }
+    .contact-success {
+      color: var(--accent);
+      margin-top: 1rem;
+      font-weight: 600;
+      display: none;
+    }
+    /* Learning Circles */
+    .circle-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+    .circle-card {
+      flex: 1 1 280px;
+      background: #1a2332;
+      border-radius: 12px;
+      padding: 1.2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(41,121,255,0.04);
+      border: 1.5px solid var(--border);
+      transition: border 0.2s, box-shadow 0.2s;
+      position: relative;
+      min-width: 260px;
+      max-width: 320px;
+      margin-bottom: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .circle-card:hover {
+      border: 1.5px solid var(--accent);
+      box-shadow: 0 4px 24px rgba(29,233,182,0.10);
+    }
+    .circle-card h4 {
+      margin: 0.5rem 0 0.2rem 0;
+      color: var(--accent2);
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+    .circle-card p {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+    .circle-card .circle-brief {
+      font-size: 0.97rem;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+    }
+    .reputation {
+      margin-top: 2rem;
+      background: #1a2332;
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      border: 1.5px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      color: #fff;
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      line-height: 52px;
+      font-size: 1.7rem;
+      margin: 0 0.7rem;
+      box-shadow: 0 2px 8px rgba(29,233,182,0.10);
+      border: 2px solid #fff2;
+      transition: transform 0.15s;
+    }
+    .badge:hover {
+      transform: scale(1.12) rotate(-6deg);
+    }
+    /* Circle Details */
+    .circle-details {
+      margin-top: 1rem;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #232c3b;
+      margin-bottom: 1.2rem;
+    }
+    .tab {
+      padding: 0.8rem 1.7rem;
+      cursor: pointer;
+      color: var(--accent2);
+      border: none;
+      background: none;
+      font-size: 1.13rem;
+      border-bottom: 3px solid transparent;
+      transition: border 0.2s, background 0.2s;
+      font-weight: 600;
+      outline: none;
+    }
+    .tab.active {
+      border-bottom: 3px solid var(--accent);
+      font-weight: bold;
+      background: #1a2332;
+      color: var(--accent);
+    }
+    .tab-content {
+      padding: 1rem 0;
+      min-height: 90px;
+      animation: fadein 0.4s;
+    }
+    .resource-list, .discussion-list, .member-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .resource-list li, .discussion-list li, .member-list li {
+      padding: 0.7rem 0.5rem;
+      border-bottom: 1px solid #232c3b;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+    .discussion-list li span {
+      color: var(--accent2);
+      font-weight: bold;
+    }
+    .member-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .member-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.13rem;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(41,121,255,0.10);
+    }
+    /* Wallet Modal */
+    #walletModal {
+      display:none;
+      position:fixed;
+      top:0;left:0;width:100vw;height:100vh;
+      background:rgba(24,31,42,0.85);
+      z-index:1000;
+      align-items:center;
+      justify-content:center;
+      animation: fadein 0.3s;
+    }
+    #walletModal.active {
+      display: flex;
+      animation: fadein 0.3s;
+    }
+    #walletModal > div {
+      background: #232c3b;
+      padding:2.2rem 2.5rem 2rem 2.5rem;
+      border-radius:18px;
+      max-width:350px;
+      margin:auto;
+      box-shadow: 0 8px 32px rgba(29,233,182,0.18);
+      text-align:center;
+      position:relative;
+      animation: popin 0.3s;
+      color: var(--text);
+    }
+    @keyframes popin {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    #closeModal {
+      position:absolute;
+      top:12px;right:16px;
+      background:none;
+      border:none;
+      font-size:1.5rem;
+      cursor:pointer;
+      color:#b0b8c1;
+      transition: color 0.2s;
+    }
+    #closeModal:hover { color: var(--accent2);}
+    #walletModal img {
+      border-radius:8px;
+      border:1px solid #263043;
+      background: #fff;
+    }
+    #walletModal input {
+      width:90%;
+      padding:0.7rem;
+      border-radius:7px;
+      border:1.5px solid #263043;
+      margin-bottom:0.5rem;
+      background: #181f2a;
+      color: var(--text);
+      font-size: 1.05rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    #walletModal input:focus {
+      border:1.5px solid var(--accent2);
+    }
+    #walletModal .wallet-icons span {
+      font-size:2.1rem;
+      margin:0 0.6rem;
+      vertical-align:middle;
+      filter: grayscale(0.2);
+      transition: filter 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    #walletModal .wallet-icons span:hover {
+      filter: grayscale(0) brightness(1.2);
+      transform: scale(1.15) rotate(-6deg);
+    }
+    #walletModal .btn {
+      margin-top: 1.1rem;
+    }
+    /* Profile */
+    .profile-header {
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .profile-header .member-avatar {
+      width:64px;height:64px;font-size:2rem;
+      background: var(--accent);
+      box-shadow: 0 2px 8px rgba(29,233,182,0.10);
+    }
+    .profile-header strong {
+      color: var(--accent2);
+    }
+    .profile-header span {
+      color: var(--text-muted);
+      font-size: 1.01rem;
+    }
+    @media (max-width: 1100px) {
+      .container { max-width: 98vw;}
+    }
+    @media (max-width: 900px) {
+      .container { padding: 1.2rem; }
+    }
+    @media (max-width: 700px) {
+      .features, .circle-list, .reviews-list { flex-direction: column; gap: 1.2rem;}
+      .container { padding: 0.7rem;}
+      .review-card { width: 100%; }
+      .circle-card { min-width: 0; max-width: 100%; }
+    }
+    @media (max-width: 500px) {
+      #walletModal > div {
+        padding: 1rem 0.5rem;
+        max-width: 95vw;
+      }
+    }
